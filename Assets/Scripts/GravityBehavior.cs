@@ -14,7 +14,7 @@ public class GravityBehavior : MonoBehaviour {
       Vector2 forceDirection = transform.position - hit.transform.position;
       float distance = Vector2.Distance(transform.position, hit.transform.position);
       if (rb != null) {
-        rb.AddForce(forceDirection * 3/(distance+1) * Time.fixedDeltaTime);
+        rb.AddForce(forceDirection * 10/(distance+1) * Time.fixedDeltaTime);
       }
     }
   }
