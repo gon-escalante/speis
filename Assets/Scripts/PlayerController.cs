@@ -10,12 +10,12 @@ public class PlayerController : MonoBehaviour {
   PlayerControls controls;
   Vector2 move;
   Vector2 rotat;
-  float turnSpeed = 100f;
+  float turnSpeed = 10f;
   float r2 = 0;
   float l2 = 0;
   bool south = false;
   bool north = false;
-  bool east = false;
+  // bool east = false;
 
   private void Awake() {
     controls = new PlayerControls();
@@ -37,8 +37,8 @@ public class PlayerController : MonoBehaviour {
     controls.Gameplay.North.performed += ctx => north = true;
     controls.Gameplay.North.canceled += ctx => north = false;
     
-    controls.Gameplay.East.performed += ctx => east = true;
-    controls.Gameplay.East.canceled += ctx => east = false;
+    // controls.Gameplay.East.performed += ctx => east = true;
+    // controls.Gameplay.East.canceled += ctx => east = false;
     
     controls.Gameplay.West.performed += ctx => shoot();
   }
